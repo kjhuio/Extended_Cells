@@ -1,6 +1,7 @@
 package extendedcells;
 
 import appeng.api.client.StorageCellModels;
+import appeng.items.storage.BasicStorageCell;
 import extendedcells.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
@@ -29,7 +30,10 @@ public class ExtendedCellsClient {
         ExtendedCells.LOGGER.info("HELLO FROM CLIENT SETUP");
         ExtendedCells.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
-        event.enqueueWork(ExtendedCellsClient::registerDriveCellModels);
+        event.enqueueWork(() -> {
+            registerDriveCellModels();
+            registerItemColors();
+        });
     }
 
     private static void registerDriveCellModels() {
@@ -57,4 +61,30 @@ public class ExtendedCellsClient {
                 item,
                 ResourceLocation.fromNamespaceAndPath(ExtendedCells.MODID, "block/drive/cells/" + id));
     }
+
+    private static void registerItemColors() {
+        var itemColors = Minecraft.getInstance().getItemColors();
+
+        itemColors.register(
+                BasicStorageCell::getColor,
+                ModItems.EXT_ITEM_CELL_1K.get(),
+                ModItems.EXT_ITEM_CELL_4K.get(),
+                ModItems.EXT_ITEM_CELL_16K.get(),
+                ModItems.EXT_ITEM_CELL_64K.get(),
+                ModItems.EXT_ITEM_CELL_256K.get(),
+
+                ModItems.EXT_FLUID_CELL_1K.get(),
+                ModItems.EXT_FLUID_CELL_4K.get(),
+                ModItems.EXT_FLUID_CELL_16K.get(),
+                ModItems.EXT_FLUID_CELL_64K.get(),
+                ModItems.EXT_FLUID_CELL_256K.get(),
+
+                ModItems.EXT_CHEMICAL_CELL_1K.get(),
+                ModItems.EXT_CHEMICAL_CELL_4K.get(),
+                ModItems.EXT_CHEMICAL_CELL_16K.get(),
+                ModItems.EXT_CHEMICAL_CELL_64K.get(),
+                ModItems.EXT_CHEMICAL_CELL_256K.get()
+        );
+    }
+
 }
