@@ -10,6 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
@@ -32,7 +33,6 @@ public class ExtendedCellsClient {
 
         event.enqueueWork(() -> {
             registerDriveCellModels();
-            registerItemColors();
         });
     }
 
@@ -62,10 +62,8 @@ public class ExtendedCellsClient {
                 ResourceLocation.fromNamespaceAndPath(ExtendedCells.MODID, "block/drive/cells/" + id));
     }
 
-    private static void registerItemColors() {
-        var itemColors = Minecraft.getInstance().getItemColors();
-
-        itemColors.register(
+    static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+        event.register(
                 BasicStorageCell::getColor,
                 ModItems.EXT_ITEM_CELL_1K.get(),
                 ModItems.EXT_ITEM_CELL_4K.get(),
@@ -84,7 +82,7 @@ public class ExtendedCellsClient {
                 ModItems.EXT_CHEMICAL_CELL_16K.get(),
                 ModItems.EXT_CHEMICAL_CELL_64K.get(),
                 ModItems.EXT_CHEMICAL_CELL_256K.get()
-        );
+    );
     }
 
 }
