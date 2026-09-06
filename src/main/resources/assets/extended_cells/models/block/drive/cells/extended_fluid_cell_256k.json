@@ -1,0 +1,6 @@
+{
+  "parent": "extended_cells:block/drive/drive_cell",
+  "textures": {
+    "cell": "extended_cells:block/drive/cells/extended_fluid_cell_256k"
+  }
+}

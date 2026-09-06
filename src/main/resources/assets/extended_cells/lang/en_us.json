@@ -1,13 +1,17 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
-  "item.examplemod.example_item": "Example Item",
-
-  "examplemod.configuration.title": "Example Mod Configs",
-  "examplemod.configuration.section.examplemod.common.toml": "Example Mod Configs",
-  "examplemod.configuration.section.examplemod.common.toml.title": "Example Mod Configs",
-  "examplemod.configuration.items": "Item List",
-  "examplemod.configuration.logDirtBlock": "Log Dirt Block",
-  "examplemod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "examplemod.configuration.magicNumber": "Magic Number"
+  "item.extended_cells.extended_item_cell_1k": "Extended 1K ME Item Storage Cell",
+  "item.extended_cells.extended_item_cell_4k": "Extended 4K ME Item Storage Cell",
+  "item.extended_cells.extended_item_cell_16k": "Extended 16K ME Item Storage Cell",
+  "item.extended_cells.extended_item_cell_64k": "Extended 64K ME Item Storage Cell",
+  "item.extended_cells.extended_item_cell_256k": "Extended 256K ME Item Storage Cell",
+  "item.extended_cells.extended_fluid_cell_1k": "Extended 1K ME Fluid Storage Cell",
+  "item.extended_cells.extended_fluid_cell_4k": "Extended 4K ME Fluid Storage Cell",
+  "item.extended_cells.extended_fluid_cell_16k": "Extended 16K ME Fluid Storage Cell",
+  "item.extended_cells.extended_fluid_cell_64k": "Extended 64K ME Fluid Storage Cell",
+  "item.extended_cells.extended_fluid_cell_256k": "Extended 256K ME Fluid Storage Cell",
+  "item.extended_cells.extended_chemical_cell_1k": "Extended 1K ME Chemical Storage Cell",
+  "item.extended_cells.extended_chemical_cell_4k": "Extended 4K ME Chemical Storage Cell",
+  "item.extended_cells.extended_chemical_cell_16k": "Extended 16K ME Chemical Storage Cell",
+  "item.extended_cells.extended_chemical_cell_64k": "Extended 64K ME Chemical Storage Cell",
+  "item.extended_cells.extended_chemical_cell_256k": "Extended 256K ME Chemical Storage Cell"
 }

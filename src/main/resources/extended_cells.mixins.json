@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "extendedcells.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BasicCellInventoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
